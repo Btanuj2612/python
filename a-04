@@ -47,5 +47,41 @@ while low<=high:
 else:
     print(f"element is not in the sequence")
     
+    
+#binary sort
+    lst = []
+
+# Input number of elements
+n = int(input("Enter the number of elements: "))
+
+# Input elements into the list
+for j in range(n):
+    element = int(input())
+    lst.append(element)
+
+# Display the list
+print("List:", lst)
+
+# Input target value to search for
+target = int(input("Enter the number to search for: "))
+
+
+
+# Initialize pointers for binary search
+low = 0
+high = len(lst) - 1
+
+# Perform binary search
+while low <= high:
+    mid = (low + high) // 2
+    if lst[mid] == target:
+        print(f"Element {target} found at index {mid}")
+        break
+    elif lst[mid] < target:
+        low = mid + 1
+    else:
+        high = mid - 1
+else:
+    print("Element is not in the list")
         
     
